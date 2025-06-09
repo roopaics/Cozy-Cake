@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cozy Cake</title>
+  <meta name="description" content="Cozy Cake offers delicious desserts including fruitcakes, milkcakes, cheesecakes, and more. Visit us for a sweet treat!" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffaf5;
+      color: #8f5704;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #5a3e36;
+      color: white;
+      padding: 1.5em 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    nav {
+      margin-top: 0.5em;
+    }
+
+    nav a {
+      margin: 0 1.2em;
+      color: #fce8d5;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffe4a0;
+    }
+
+    .hero {
+      position: relative;
+      height: 85vh;
+      background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('cozycafe.jfif');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero-text {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 2em 3em;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    section {
+      padding: 3em 2em;
+      margin: 0 auto;
+      max-width: 1400px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #5a3e36;
+      margin-bottom: 1.2em;
+      font-size: 2rem;
+    }
+
+    .menu-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: center;
+    }
+
+    .menu-item {
+      background-color: #ffffff;
+      padding: 1em;
+      border-radius: 10px;
+      width: 240px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.7em;
+    }
+
+    .menu-item p {
+      font-weight: 600;
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    .menu-item button {
+      margin-top: 0.5em;
+      padding: 0.6em 1.2em;
+      background-color: #5a3e36;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.95em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .menu-item button:hover {
+      background-color: #7c5b4e;
+    }
+
+    .about-img {
+      width: 70%;
+      max-width: 600px;
+      margin-top: 2em;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+.contact-form {
+  max-width: 500px;
+  margin: 1.5em auto 3em;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.4em;
+  font-weight: 600;
+  color: #5a3e36;
+  font-size: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 1.2em;
+  border: 2px solid #8f5704;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #5a3e36;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fffaf5;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #5a3e36;
+  box-shadow: 0 0 8px #5a3e36aa;
+  outline: none;
+}
+
+.contact-form button {
+  background-color: #5a3e36;
+  color: white;
+  border: none;
+  padding: 14px 0;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #7c5b4e;
+}
+
+
+    footer {
+      text-align: center;
+      background-color: #5a3e36;
+      color: white;
+      padding: 1.2em;
+      margin-top: 3em;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cozy Cake</h1>
+    <nav>
+      <a href="#MENU">Menu</a>
+      <a href="#ABOUT">About</a>
+      <a href="#CONTACT">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Welcome to Cozy Cake</h2>
+      <p>Your favorite spot for sweet and delicious conversation.</p>
+    </div>
+  </section>
+
+  <section id="MENU">
+    <h2>OUR MENU</h2> 
+    <div class="menu-items">
+      <div class="menu-item">
+        <img src="fruitcake.jpg" alt="Fruitcake" loading="lazy" />
+        <p><strong>Fruitcake</strong> - $1,500</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="freshcake.jpg" alt="Milkcake" loading="lazy" />
+        <p><strong>Milkcake</strong> - $1,200</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="strawberryy.jpg" alt="Chocolate Strawberry" loading="lazy" />
+        <p><strong>ChocolateStrawberry</strong>-$1,800</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="blueberry.jpg" alt="Blueberry Muffin" loading="lazy" />
+        <p><strong>Blueberry Muffin</strong> - $1,500</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="blue.jpg" alt="Buttercake" loading="lazy" />
+        <p><strong>Buttercake</strong> - $1,100</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="galaxyy.jpg" alt="Galaxy Theme Cake" loading="lazy" />
+        <p><strong>Galaxy Theme Cake</strong> - $1,700</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="mango.jfif" alt="Mango Cheesecake" loading="lazy" />
+        <p><strong>Mango Cheesecake</strong> - $1,270</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="caramel.jpg" alt="Caramel Pudding" loading="lazy" />
+        <p><strong>Caramel Pudding</strong> - $1,000</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="floral.webp" alt="Floral Delight" loading="lazy" />
+        <p><strong>Floral Delight</strong> - $1,900</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="ombre.jpg" alt="Ombre Cake" loading="lazy" />
+        <p><strong>Ombre Cake</strong> - $1,300</p>
+        <button>Add to Cart</button>
+      </div>
+     <div class="menu-item">
+        <img src="carrot.jpeg" alt="Carrot Cake" loading="lazy" />
+        <p><strong>Carrot Cake</strong> - $1,500</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="coconut1.webp" alt="Coconut Cake" loading="lazy" />
+        <p><strong>Coconut Cake</strong> - $1,490</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="ABOUT">
+    <h2>ABOUT US</h2>
+    <p>
+     Cakes are sweet baked desserts that have become a staple in celebrations and daily enjoyment around the world. Traditionally made from a mixture of flour, sugar, eggs, fat, and a leavening agent like baking powder or baking soda, cakes come in a wide variety of textures and flavors. There are several main types, including rich butter cakes, light and airy sponge or chiffon cakes, dense pound cakes, and even non-traditional varieties like cheesecakes and flourless chocolate cakes. Around the globe, cakes reflect cultural tastes and traditions—Black Forest cake from Germany, tres leches from Latin America, and mille crêpes from France and Japan are just a few examples. Decoration is a major aspect of cake-making, with options like buttercream frosting, fondant, whipped cream, or ganache, often adorned with fruits, nuts, or edible flowers. Whether for birthdays, weddings, holidays, or simply a sweet indulgence, cakes hold a special place in both festive and everyday moments.
+    </p>
+    <img src="cuppcake.webp" alt="About the cafe" class="about-img" loading="lazy" />
+  </section>
+
+  <section id="CONTACT">
+  <h2>CONTACT</h2>
+  <form class="contact-form" action="#" method="POST" onsubmit="alert('Thank you for contacting Cozy Cake!'); return false;">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" placeholder="Subject of your message" required />
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Cozy Cake. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.menu-item button').forEach(button => {
+      button.addEventListener('click', () => {
+        alert('Item added to cart!');
+      });
+    });
+  </script>
+</body>
+</html>
